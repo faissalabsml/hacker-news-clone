@@ -1,0 +1,292 @@
+:root {
+  --clr-primary: hsl(15, 100%, 50%);
+  --clr-primary-transparent: hsla(15, 100%, 50%, 0.8);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-white-transparent: hsla(0, 0%, 100%, 0.1);
+
+  --clr-gray-1: hsl(0, 0%, 92%);
+  --clr-gray-2: hsl(0, 0%, 70%);
+  --clr-gray-3: hsl(0, 0%, 50%);
+  --clr-gray-4: hsl(0, 0%, 12%);
+  --clr-gray-transparent: hsla(0, 0%, 70%, 0.5);
+
+  --clr-dark: hsl(0, 0%, 2%);
+
+  --bg-clr: var(--clr-dark);
+  --bg-clr-gray: var(--clr-gray-4);
+  --text-clr: var(--clr-white);
+  --text-clr-gray: var(--clr-gray-1);
+  --text-clr-gray-light: var(--clr-gray-3);
+}
+
+[data-theme="light"] {
+  --bg-clr: var(--clr-white);
+  --bg-clr-gray: var(--clr-gray-1);
+  --text-clr: var(--clr-dark);
+  --text-clr-gray: var(--clr-gray-4);
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+/* GENERALE STYLING */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+[data-theme] {
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  transition: all 0.2s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 3.5rem 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.logo {
+  font-weight: 700;
+  border: 3px solid var(--text-clr);
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-links {
+  font-weight: 700;
+}
+
+.nav-link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--clr-primary);
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
+.theme-switcher {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.main {
+  margin-top: 3.5rem;
+}
+
+.story:not(:last-child) {
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--clr-white-transparent);
+}
+
+.heading-1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.heading-2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.heading-3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+}
+
+.link {
+  font-weight: 500;
+  margin: 0 0.2rem;
+}
+
+.link-heading {
+  color: var(--text-clr);
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+.link-small {
+  font-size: 0.8rem;
+}
+
+.link:hover {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+.link-small:visited {
+  color: var(--clr-primary-transparent);
+}
+
+.item {
+  font-size: 1.05rem;
+}
+
+.item-info {
+  color: var(--text-clr-gray-light);
+}
+
+.item-info::first-letter {
+  text-transform: uppercase;
+}
+
+.item-text {
+  margin: 1.1rem 0;
+}
+
+.item p {
+  line-height: 1.6;
+}
+
+.comments {
+  margin-top: 2rem;
+}
+
+.comment {
+  background-color: var(--bg-clr-gray);
+  padding: 0.9rem 0.8rem;
+  border-radius: 5px;
+}
+
+.comment:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.comment-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.comment-body {
+  margin-top: 0.5rem;
+}
+
+.comment-kids {
+  padding-left: 1rem;
+}
+
+.item-text a,
+.comment-body a {
+  color: var(--clr-primary-transparent);
+}
+
+.item-text a,
+.comment-body a:hover {
+  color: var(--clr-primary);
+}
+
+.user-info {
+  /* color: var(--clr-gray-1);
+  cp */
+  color: var(--text-clr-gray-light);
+}
+
+.user-info span {
+  color: var(--text-clr-gray);
+  font-weight: 700;
+}
+
+.user-about {
+  margin-top: 1.5rem;
+  line-height: 1.7;
+  padding-left: 0.5rem;
+  border-left: 5px solid var(--clr-primary);
+}
+
+.collapse-btn {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.loading {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.message {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.pagination a {
+  border: 1px solid var(--text-clr);
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 2.55rem;
+}
+
+.pagination .active a,
+.pagination a:hover {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+.pagination .disabled {
+  display: none;
+}
